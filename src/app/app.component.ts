@@ -80,7 +80,8 @@ export class AppComponent{
   colDefs: ColDef[] = [
     {
       field: "Card_Page",
-      cellRenderer: CardComponent
+      cellRenderer: CardComponent,
+      flex: 0.8
     },
     {
       field: "Actions",
@@ -90,10 +91,18 @@ export class AppComponent{
     { field: "Last_Name" },
     { field: "Nationality" },
     { field: "Title" },
-    { field: "Days_On_Board" },
-    { field: "Daily_Rate" },
-    { field: "Currency" },
-    { field: "Total_Income" },
+    { field: "Days_On_Board",
+      flex: 0.8
+     },
+    { field: "Daily_Rate",
+      flex: 0.8
+     },
+    { field: "Currency",
+      flex: 0.8
+     },
+    { field: "Total_Income",
+      flex: 1.5
+     },
     // { field: "" },
   ];
 
