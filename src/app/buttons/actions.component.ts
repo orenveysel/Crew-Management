@@ -4,8 +4,8 @@ import { ICellRendererParams } from "ag-grid-community";
 
 @Component({
   standalone: true,
-  template: `<button (click)="onDeleteButton()">Delete</button>`
-   + `<button (click)="onUpdateButton()">Update</button>`,
+  template: `<button (click)="onEditButton()">Edit</button>`
+   + `<button (click)="onDeleteButton()">Delete</button>`,
 })
 export class ActionsComponent implements ICellRendererAngularComp {
   agInit(params: ICellRendererParams): void {}
@@ -13,12 +13,12 @@ export class ActionsComponent implements ICellRendererAngularComp {
       return true;
   }
 
-  onDeleteButton() {
-    alert("Delete");
+  onEditButton() {
+    alert("Edit");
   }
 
-  onUpdateButton() {
-    alert("Update");
+  onDeleteButton() {
+    alert("Delete");
   }
 
 }
