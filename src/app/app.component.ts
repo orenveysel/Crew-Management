@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
@@ -12,7 +12,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   
   crews = [
     { First_Name: "Ahmet", 
@@ -74,9 +74,30 @@ export class AppComponent {
   ];
 
   colDefs: ColDef[] = [
-    { field: "Card_Page" },
-    { field: "Edit_Page" },
-    { field: "Delete_Crew" },
+    {
+      field: 'Card_Page',
+      cellRenderer: (params: any) => {
+        return `
+          <button (click)="onCardClick(${params.rowIndex})">Card</button>
+        `;
+      }
+    },
+    {
+      field: 'Edit_Page',
+      cellRenderer: (params: any) => {
+        return `
+          <button (click)="onEditClick(${params.rowIndex})">Edit</button>
+        `;
+      }
+    },
+    {
+      field: 'Delete_Crew',
+      cellRenderer: (params: any) => {
+        return `
+          <button (click)="onDeleteClick(${params.rowIndex})">Delete</button>
+        `;
+      }
+    },
     { field: "First_Name" },
     { field: "Last_Name" },
     { field: "Nationality" },
@@ -87,4 +108,23 @@ export class AppComponent {
     { field: "Total_Income" },
     // { field: "" },
   ];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onCardClick(rowIndex: any) {
+    const rowData = this.crews[rowIndex];
+    alert('Card button clicked for: ' + rowData.First_Name);
+  }
+
+  onEditClick(rowIndex: any) {
+    const rowData = this.crews[rowIndex];
+    alert('Edit button clicked for: ' + rowData.First_Name);
+  }
+
+  onDeleteClick(rowIndex: any) {
+    const rowData = this.crews[rowIndex];
+    alert('Delete button clicked for: ' + rowData.First_Name);
+  }
 }
