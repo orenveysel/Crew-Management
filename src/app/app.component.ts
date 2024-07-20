@@ -20,12 +20,12 @@ export class AppComponent{
     { id: 1,
       First_Name: "Ahmet", 
       Last_Name: "Yılmaz", 
-      Nationality: "France", 
+      Nationality: "French", 
       Title: "Captain",
-      Days_On_Board: "A",
-      Daily_Rate: "B",
-      Currency: "C",
-      Total_Income: "D"
+      Days_On_Board: 496,
+      Daily_Rate: 600,
+      Currency: "USD",
+      Total_Income: "297.600"
     },
 
     { id: 2,
@@ -33,21 +33,21 @@ export class AppComponent{
       Last_Name: "Kaya", 
       Nationality: "German", 
       Title: "Engineer",
-      Days_On_Board: "A",
-      Daily_Rate: "B",
-      Currency: "C",
-      Total_Income: "D"
+      Days_On_Board: 244,
+      Daily_Rate: 450,
+      Currency: "EUR",
+      Total_Income: "109.800"
     },
 
     { id: 3,
       First_Name: "Mustafa", 
       Last_Name: "Demir", 
-      Nationality: "Italian", 
+      Nationality: "Canadian", 
       Title: "Cooker",
-      Days_On_Board: "A",
-      Daily_Rate: "B",
-      Currency: "C",
-      Total_Income: "D"
+      Days_On_Board: 421,
+      Daily_Rate: 380,
+      Currency: "USD",
+      Total_Income: "159.980"
     },
 
     { id: 4,
@@ -55,21 +55,21 @@ export class AppComponent{
       Last_Name: "Şahin", 
       Nationality: "Turkish", 
       Title: "Mechanicer",
-      Days_On_Board: "A",
-      Daily_Rate: "B",
-      Currency: "C",
-      Total_Income: "D"
+      Days_On_Board: 328,
+      Daily_Rate: 240,
+      Currency: "EUR",
+      Total_Income: "78.720"
     },
 
     { id: 5,
       First_Name: "Fatih", 
       Last_Name: "Çelik", 
-      Nationality: "Madagascar", 
-      Title: "Flap Jack",
-      Days_On_Board: "A",
-      Daily_Rate: "B",
-      Currency: "C",
-      Total_Income: "D"
+      Nationality: "Japanese", 
+      Title: "Doctor",
+      Days_On_Board: 93,
+      Daily_Rate: 550,
+      Currency: "USD",
+      Total_Income: "51.150"
     },
 
     { id: 6,
