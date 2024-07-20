@@ -55,9 +55,7 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    { Card_Page: "Card",
-      Edit_Page: "Edit",  
-      Delete_Crew: "Delete",
+    { 
       First_Name: "Fatih", 
       Last_Name: "Çelik", 
       Nationality: "Madagascar", 
@@ -74,26 +72,17 @@ export class AppComponent implements OnInit{
   ];
 
   colDefs: ColDef[] = [
-    {
-      field: 'Card_Page',
+    { field: "Card_Page",
       cellRenderer: (params: any) => {
         return `
-          <button (click)="onCardClick(${params.rowIndex})">Card</button>
+          <button (click)="onCardClick(${params.rowIndex})">Card Page</button>
         `;
-      }
-    },
+      }},
     {
-      field: 'Edit_Page',
+      field: "Actions",
       cellRenderer: (params: any) => {
         return `
           <button (click)="onEditClick(${params.rowIndex})">Edit</button>
-        `;
-      }
-    },
-    {
-      field: 'Delete_Crew',
-      cellRenderer: (params: any) => {
-        return `
           <button (click)="onDeleteClick(${params.rowIndex})">Delete</button>
         `;
       }
@@ -115,7 +104,7 @@ export class AppComponent implements OnInit{
 
   onCardClick(rowIndex: any) {
     const rowData = this.crews[rowIndex];
-    alert('Card button clicked for: ' + rowData.First_Name);
+    alert('Card Page button clicked for: ' + rowData.First_Name);
   }
 
   onEditClick(rowIndex: any) {
