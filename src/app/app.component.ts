@@ -73,7 +73,7 @@ export class AppComponent{
     },
 
     { id: 6,
-      Total_Income: "TOTAL INCOME"
+      Total_Income: "508.730 USD + 188.520 EUR"
     }
   ];
 
