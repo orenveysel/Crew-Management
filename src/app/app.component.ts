@@ -1,21 +1,24 @@
-import { Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component} from '@angular/core';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
+import { CardComponent } from './buttons/card.component';
+import { ActionsComponent } from './buttons/actions.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AgGridAngular],
+  imports: [RouterOutlet, RouterModule, AgGridAngular],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   
   crews = [
-    { First_Name: "Ahmet", 
+    { id: 1,
+      First_Name: "Ahmet", 
       Last_Name: "Yılmaz", 
       Nationality: "France", 
       Title: "Captain",
@@ -25,7 +28,8 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    { First_Name: "Mehmet", 
+    { id: 2,
+      First_Name: "Mehmet", 
       Last_Name: "Kaya", 
       Nationality: "German", 
       Title: "Engineer",
@@ -35,7 +39,8 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    { First_Name: "Mustafa", 
+    { id: 3,
+      First_Name: "Mustafa", 
       Last_Name: "Demir", 
       Nationality: "Italian", 
       Title: "Cooker",
@@ -45,7 +50,8 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    { First_Name: "Fatma", 
+    { id: 4,
+      First_Name: "Fatma", 
       Last_Name: "Şahin", 
       Nationality: "Turkish", 
       Title: "Mechanicer",
@@ -55,7 +61,7 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    { 
+    { id: 5,
       First_Name: "Fatih", 
       Last_Name: "Çelik", 
       Nationality: "Madagascar", 
@@ -66,26 +72,19 @@ export class AppComponent implements OnInit{
       Total_Income: "D"
     },
 
-    {
+    { id: 6,
       Total_Income: "TOTAL INCOME"
     }
   ];
 
   colDefs: ColDef[] = [
-    { field: "Card_Page",
-      cellRenderer: (params: any) => {
-        return `
-          <button (click)="onCardClick(${params.rowIndex})">Card Page</button>
-        `;
-      }},
+    {
+      field: "Card_Page",
+      cellRenderer: CardComponent
+    },
     {
       field: "Actions",
-      cellRenderer: (params: any) => {
-        return `
-          <button (click)="onEditClick(${params.rowIndex})">Edit</button>
-          <button (click)="onDeleteClick(${params.rowIndex})">Delete</button>
-        `;
-      }
+      cellRenderer: ActionsComponent
     },
     { field: "First_Name" },
     { field: "Last_Name" },
@@ -98,22 +97,7 @@ export class AppComponent implements OnInit{
     // { field: "" },
   ];
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  onCardClick(rowIndex: any) {
-    const rowData = this.crews[rowIndex];
-    alert('Card Page button clicked for: ' + rowData.First_Name);
-  }
-
-  onEditClick(rowIndex: any) {
-    const rowData = this.crews[rowIndex];
-    alert('Edit button clicked for: ' + rowData.First_Name);
-  }
-
-  onDeleteClick(rowIndex: any) {
-    const rowData = this.crews[rowIndex];
-    alert('Delete button clicked for: ' + rowData.First_Name);
+  onClick() {
+    alert("Tıklandı");
   }
 }
