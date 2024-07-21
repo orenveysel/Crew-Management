@@ -1,24 +1,8 @@
 <header>
   <h1>Menu</h1>
-  
-  <!-- <nav>
-    <a [routerLink]="['/crew-list']">Crew Listesi</a>
-  </nav> -->
-
 </header>
 
-<td>
-  <button (click)="onClick()">+ Yeni Kayıt</button>
-</td>
-
-<ag-grid-angular
-  class = "ag-theme-quartz" style="height: 500px"
-  [rowData] = "crews" [columnDefs] = "colDefs">
-</ag-grid-angular>
-
 <router-outlet></router-outlet>
-
-<!-- <p>{{title}}</p> -->
 
 <footer>
   <p>Alt Bilgi</p>

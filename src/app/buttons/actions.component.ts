@@ -7,7 +7,10 @@ import { ICellRendererParams } from "ag-grid-community";
   templateUrl: './actions.component.html'
 })
 export class ActionsComponent implements ICellRendererAngularComp {
+
+
   agInit(params: ICellRendererParams): void {}
+  
   refresh(params: ICellRendererParams) {
       return true;
   }
