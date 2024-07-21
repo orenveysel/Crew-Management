@@ -4,7 +4,7 @@ import { ICellRendererParams } from "ag-grid-community";
 
 @Component({
   standalone: true,
-  template: `<button (click)="onCardButton()">Card</button>`,
+  templateUrl: './card.component.html'
 })
 export class CardComponent implements ICellRendererAngularComp {
   agInit(params: ICellRendererParams): void {}
