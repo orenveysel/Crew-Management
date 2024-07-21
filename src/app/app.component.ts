@@ -4,8 +4,7 @@ import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
-import { CardComponent } from './buttons/card.component';
-import { ActionsComponent } from './buttons/actions.component';
+
 import { ButtonRendererComponent } from './buttons/button-render.component';
 import { CrewService } from './services/crew.service';
 import { HttpClient } from '@angular/common/http';
@@ -24,8 +23,8 @@ import { GridApi } from 'ag-grid-community';
   imports: [
     RouterOutlet, // Layout işlemleri modülü
     RouterModule, // yönlendirme modulü
-    CommonModule, // NgFor NgStyle gibi ana angular bileşenleri için bunu aç
-    TranslateModule, // Dil ile çalışacağız Bu Module aktif et
+    CommonModule, // NgFor NgStyle gibi ana angular bileşenleri için bunu açıyoruz
+    TranslateModule, // Dil ile çalışacağız Bu Module aktif ediyoruz
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

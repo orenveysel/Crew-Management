@@ -82,7 +82,7 @@ export class CrewListComponent implements OnInit {
     });
   }
 
-  // edite basınca basılan kayıt ile ilgili sertifikalar popup da çıkacaktır.
+  // edite basınca basılan kayıt ile ilgili sertifikalar popup olarak çıkacak
   onEdit(event: any) {
     console.log('data', event.rowData);
 
@@ -143,7 +143,7 @@ export class CrewListComponent implements OnInit {
       .subscribe((response: any) => {
         console.log('response', response);
         if (response.statusCode == 200) {
-          // arayüzdeki veriyi güncelle.
+          // arayüzdeki veriyi günceller
           this.crews = this.crews.filter((x: any) => x.id !== event.rowData.id);
         }
       });

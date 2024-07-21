@@ -12,7 +12,7 @@ import { CrewService } from '../../services/crew.service';
 export class CrewCard implements OnInit {
   // ActivatedRoute Angularda Aktif olan yönlendirmeyi verir
 
-  crewId: number; // number tipinde ama daha hernaggi bir değer atanmamış demek.
+  crewId: number; // number tipinde ama daha herhangi bir değer atanmamış demek
 
   crew: any;
 
