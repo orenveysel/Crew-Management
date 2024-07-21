@@ -1,4 +1,10 @@
 {
-   "First_Name": "Ad",
-   "Last_Name": "Soyad"
+   "First_Name": "Prénom",
+   "Last_Name": "Nom de famille",
+   "Nationality": "Nationalité",
+   "Title": "Titre",
+   "Days_On_Board": "Jours à bord",
+   "Daily_Rate": "Taux journalier",
+   "Currency": "Monnaie",
+   "Total_Income": "Revenu total"
 }

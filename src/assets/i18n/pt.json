@@ -1,4 +1,10 @@
 {
-   "First_Name": "Portekizce Ad",
-   "Last_Name": "Portekizce Soyad"
+   "First_Name": "Nome próprio",
+   "Last_Name": "Apelido",
+   "Nationality": "Nacionalidade",
+   "Title": "Título",
+   "Days_On_Board": "Dias a bordo",
+   "Daily_Rate": "Taxa diária",
+   "Currency": "Moeda",
+   "Total_Income": "Rendimento total"
 }

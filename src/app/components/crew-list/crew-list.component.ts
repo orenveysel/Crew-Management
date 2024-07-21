@@ -40,7 +40,7 @@ export class CrewListComponent implements OnInit {
     this.translateService.onLangChange.subscribe((lang) => {
       this.colDefs = [
         {
-          headerName: 'Card',
+          headerName: 'Card Page',
           cellRenderer: ButtonRendererComponent,
           cellRendererParams: {
             onClick: this.onCard.bind(this),
@@ -48,7 +48,7 @@ export class CrewListComponent implements OnInit {
           },
         },
         {
-          headerName: 'Edit',
+          headerName: 'Edit Page',
           cellRenderer: ButtonRendererComponent,
           cellRendererParams: {
             onClick: this.onEdit.bind(this),
@@ -56,7 +56,7 @@ export class CrewListComponent implements OnInit {
           },
         },
         {
-          headerName: 'Delete',
+          headerName: 'Delete Crew',
           cellRenderer: ButtonRendererComponent,
           cellRendererParams: {
             onClick: this.onDelete.bind(this),
@@ -67,13 +67,27 @@ export class CrewListComponent implements OnInit {
           headerName: this.translateService.instant('First_Name'),
           field: 'First_Name',
         },
-        { field: 'Last_Name' },
-        { field: 'Nationality' },
-        { field: 'Title' },
-        { field: 'Days_On_Board', flex: 0.8 },
-        { field: 'Daily_Rate', flex: 0.8 },
-        { field: 'Currency', flex: 0.8 },
-        { field: 'Total_Income', flex: 1.5 },
+        { headerName: this.translateService.instant('Last_Name'),
+          field: 'Last_Name' 
+        },
+        { headerName: this.translateService.instant('Nationality'),
+          field: 'Nationality' 
+        },
+        { headerName: this.translateService.instant('Title'),
+          field: 'Title' 
+        },
+        { headerName: this.translateService.instant('Days_On_Board'),
+          field: 'Days_On_Board', flex: 0.8 
+        },
+        { headerName: this.translateService.instant('Daily_Rate'),
+          field: 'Daily_Rate', flex: 0.8 
+        },
+        { headerName: this.translateService.instant('Currency'),
+          field: 'Currency', flex: 0.8 
+        },
+        { headerName: this.translateService.instant('Total_Income'),
+          field: 'Total_Income', flex: 1.5 
+        },
       ];
     });
 
@@ -108,6 +122,7 @@ export class CrewListComponent implements OnInit {
     var Last_Name = prompt('Last_Name alanını giriniz');
     var Nationality = prompt('Nationality alanını giriniz');
     var Title = prompt('Title alanını giriniz');
+    var Certificates = prompt('Certificates alanını giriniz');
     var Days_On_Board = prompt('Days_On_Board alanını giriniz');
     var Daily_Rate = prompt('Daily_Rate alanını giriniz');
     var Currency = prompt('Currency alanını giriniz');
@@ -147,9 +162,5 @@ export class CrewListComponent implements OnInit {
           this.crews = this.crews.filter((x: any) => x.id !== event.rowData.id);
         }
       });
-  }
-
-  onClick() {
-    alert('Tıklandı');
   }
 }

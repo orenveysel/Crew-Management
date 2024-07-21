@@ -97,7 +97,7 @@ export class CrewService {
       ],
     },
 
-    // { id: 6, Total_Income: '508.730 USD + 188.520 EUR' },
+    { id: 6, Total_Income: '508.730 USD + 188.520 EUR' },
   ];
 
   getAll() {
