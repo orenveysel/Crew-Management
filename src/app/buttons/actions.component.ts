@@ -1,26 +1,29 @@
-import { Component} from "@angular/core";
-import { ICellRendererAngularComp } from "ag-grid-angular";
-import { ICellRendererParams } from "ag-grid-community";
+import { Component } from '@angular/core';
+import { ICellRendererAngularComp } from 'ag-grid-angular';
+import { ICellRendererParams } from 'ag-grid-community';
 
 @Component({
   standalone: true,
-  templateUrl: './actions.component.html'
+  templateUrl: './actions.component.html',
 })
 export class ActionsComponent implements ICellRendererAngularComp {
+  private params: any;
 
+  // veri yakalama methodu.
+  agInit(params: ICellRendererParams): void {
+    this.params = params;
+  }
 
-  agInit(params: ICellRendererParams): void {}
-  
   refresh(params: ICellRendererParams) {
-      return true;
+    return true;
   }
 
   onEditButton() {
-    alert("Edit");
+    console.log('params', this.params.data);
+    alert('edit');
   }
 
   onDeleteButton() {
-    alert("Delete");
+    alert('Delete');
   }
-
 }
