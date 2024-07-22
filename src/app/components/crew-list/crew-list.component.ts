@@ -130,15 +130,16 @@ export class CrewListComponent implements OnInit {
     var id = this.crews.length + 1;
 
     var data: any = {
-      id,
       First_Name,
       Last_Name,
       Nationality,
       Title,
+      Certificates,
       Days_On_Board,
       Daily_Rate,
       Currency,
       Total_Income,
+      id
     };
 
     console.log('eklenecek', data);
