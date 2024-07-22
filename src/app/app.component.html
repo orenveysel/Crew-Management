@@ -1,11 +1,14 @@
 <header>
   <h1>Ana Ekran</h1>
 
-  <select #language (change)="onChange(language.value)">
-    <option *ngFor="let lang of translateService.getLangs()" [value]="lang">{{
-      lang | translate
-      }}</option>
-  </select>
+  <div class="language-selector">
+    <select #language (change)="onChange(language.value)">
+      <option *ngFor="let lang of translateService.getLangs()" [value]="lang">
+        {{ lang | translate }}
+      </option>
+    </select>
+  </div>
+  
 
   
 </header>

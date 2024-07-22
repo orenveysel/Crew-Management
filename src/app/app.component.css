@@ -1,0 +1,7 @@
+.language-selector {
+    position: absolute;
+    top: 20px; /* Uygun bir değer belirleyin */
+    right: 20px; /* Uygun bir değer belirleyin */
+    z-index: 1000; /* Gerekirse, diğer öğelerin üzerine çıkmasını sağlamak için z-index ayarlayın */
+  }
+  
